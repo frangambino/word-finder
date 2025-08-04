@@ -1,168 +1,200 @@
 # WordFinder Challenge
 
-## Problem Description
+A high-performance C# solution for finding words in a character matrix. This project implements an efficient algorithm to search for words horizontally and vertically within a 2D character grid, optimized for large word streams.
 
-This challenge requires creating a `WordFinder` class that searches for words in a character matrix. Words can appear horizontally (left to right) or vertically (top to bottom).
+## Project Overview
 
-### Requirements
+The WordFinder is designed to solve the following challenge:
+- Given a character matrix (2D grid of characters)
+- Given a stream of words to search for
+- Find the top 10 most repeated words that appear in the matrix
+- Words can be found horizontally (left to right) or vertically (top to bottom)
 
-- **Required Interface**: The class must implement the specified interface
-- **Bidirectional Search**: Horizontal and vertical
-- **Top 10**: Return the 10 most repeated words found
-- **Performance**: Optimized for large word streams
-- **Validation**: Handle edge cases and errors
+## Features
 
-## Implemented Solution
+- **Efficient Search Algorithm**: Optimized for performance with large word streams
+- **Bidirectional Search**: Finds words both horizontally and vertically
+- **Case-Insensitive Matching**: Handles different letter cases seamlessly
+- **Top 10 Results**: Returns the most frequently found words
+- **Comprehensive Validation**: Robust input validation and error handling
+- **Extensive Testing**: Full test coverage with NUnit framework
+- **Modern C#**: Built with .NET 8.0 and latest C# features
 
-### WordFinder Class
-
-```csharp
-public class WordFinder
-{
-    public WordFinder(IEnumerable<string> matrix) { ... }
-    public IEnumerable<string> Find(IEnumerable<string> wordstream) { ... }
-}
-```
-
-### Key Features
-
-1. **Robust Validation**:
-   - Matrix cannot be null or empty
-   - All rows must have the same length
-   - Maximum matrix size: 64x64
-2. **Complete Search**:
-   - Horizontal: left to right
-   - Vertical: top to bottom
-   - All possible word lengths
-
-4. **Result Handling**:
-   - Top 10 most repeated words
-   - Sorting by frequency and alphabetical order
-   - Unique count per word (no stream duplicates)
-
-## Performance Analysis
-
-## Usage
-
-### Basic Example
-
-```csharp
-var matrix = new List<string> 
-{ 
-    "abccc",
-    "rgwio", 
-    "chill",
-    "pqnsd",
-    "uvdxy"
-};
-var wordstream = new List<string> { "chill", "cold", "wind", "notfound" };
-
-var finder = new WordFinder(matrix);
-var results = finder.Find(wordstream);
-
-foreach (var word in results)
-{
-    Console.WriteLine(word);
-}
-```
-
-### Expected Output
-```
-chill
-```
-
-## Unit Tests
-
-The solution includes comprehensive tests covering:
-
-- Valid input cases
-- Error validation
-- Horizontal and vertical search
-- Edge cases (empty matrix, empty stream)
-- Case-insensitive search
-- 10 result limit
-- Challenge example
-- Parameterized tests with TestCase
-
-### Test Framework: NUnit
-
-The project uses NUnit for testing, which provides:
-
-- **Fluent Assertions**: `Assert.That(result, Is.EqualTo(expected))`
-- **Parameterized Tests**: `[TestCase(...)]`
-- **Better Error Messages**: More descriptive failure messages
-- **Test Fixtures**: `[TestFixture]` for class organization
-
-## Compilation and Execution
+## Quick Start
 
 ### Prerequisites
-- .NET 8.0 or higher
 
-### Build
+- .NET 8.0 SDK or later
+- Visual Studio 2022, VS Code, or any .NET-compatible IDE
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd WordFinderProject
+```
+
+2. Build the project:
 ```bash
 dotnet build
 ```
 
-### Run
+3. Run the application:
 ```bash
-dotnet run
+dotnet run --project WordFinderProject
 ```
 
-### Run Tests
+## 📖 Usage
+
+### Basic Example
+
+```csharp
+// Create a character matrix
+var matrix = new List<string>
+{
+    "dabcccmobiholas",
+    "orgwiocareadios",
+    "gchilloeqeperro",
+    "zpqnsdtopehoaax",
+    "xuvdogredoagggd"
+};
+
+// Define words to search for
+var wordStream = new List<string>
+{
+    "chill", "cold", "wind", "dog", "red", "car"
+};
+
+// Create WordFinder instance
+var finder = new WordFinder(matrix);
+
+// Find words and get results with counts
+var results = finder.FindWithCounts(wordStream);
+
+// Display results
+foreach (var result in results)
+{
+    Console.WriteLine($"- {result.Key} ({result.Value})");
+}
+```
+
+### API Reference
+
+#### WordFinder Class
+
+**Constructor:**
+```csharp
+public WordFinder(IEnumerable<string> matrix)
+```
+- `matrix`: Character matrix represented as a collection of strings
+- Throws `ArgumentNullException` if matrix is null
+- Throws `ArgumentException` if matrix is empty, inconsistent, or exceeds 64x64
+
+**Methods:**
+
+1. **Find** - Returns top 10 words without counts:
+```csharp
+public IEnumerable<string> Find(IEnumerable<string> wordstream)
+```
+
+2. **FindWithCounts** - Returns top 10 words with occurrence counts:
+```csharp
+public IEnumerable<KeyValuePair<string, int>> FindWithCounts(IEnumerable<string> wordstream)
+```
+
+## Testing
+
+The project includes comprehensive unit tests covering:
+
+- Constructor validation
+- Horizontal and vertical word finding
+- Edge cases and error conditions
+- Performance with large matrices
+- Case-insensitive matching
+- Duplicate word handling
+
+### Running Tests
+
 ```bash
+# Run all tests
 dotnet test
-```
 
-### Run Tests with Coverage
-```bash
+# Run tests with coverage
 dotnet test --collect:"XPlat Code Coverage"
+
+# Run specific test project
+dotnet test TestProject/
 ```
 
-## Project Structure
+## Example Output
+
+When you run the application, you'll see output like this:
 
 ```
-Challenge/
-├── WordFinder.cs                    # Main class
-├── Program.cs                       # Demo program
-├── WordFinderChallenge.csproj       # Main project file
-├── WordFinderChallenge.sln          # Solution file
-├── WordFinderChallenge.Tests/       # Test project
-│   ├── WordFinderTests.cs          # xUnit tests
-│   └── WordFinderChallenge.Tests.csproj  # Test project file
-└── README.md                       # Documentation
+=== WordFinder Challenge Demo ===
+
+Matrix:
+
+dabcccmobiholas
+orgwiocareadios
+gchilloeqeperro
+zpqnsdtopehoaax
+xuvdogredoagggd
+
+
+Word Stream:
+chill, cold, wind, dog, red, car
+
+Results (Top 10 most repeated words found):
+- chill (1)
+- cold (1)
+- dog (1)
+- red (1)
+- wind (1)
 ```
 
-## Analysis and Evaluation
+## 🔧 Project Structure
 
-### Solution Strengths
+```
+WordFinderProject/
+├── WordFinderProject/          # Main application
+│   ├── Program.cs             # Console application entry point
+│   ├── WordFinder.cs          # Core WordFinder implementation
+│   └── WordFinderProject.csproj
+├── TestProject/               # Unit tests
+│   ├── WordFinderTests.cs     # Comprehensive test suite
+│   └── TestProject.csproj
+└── README.md                  # This file
+```
 
-1. **Clean Code**: Clear structure and well-documented
-2. **Performance**: Optimized algorithm for real-world cases
-3. **Robustness**: Complete error and edge case handling
-4. **Testability**: Full test coverage
-5. **Scalability**: Prepared for large streams
+## Algorithm Details
 
-### Design Decisions
+The WordFinder uses an optimized approach:
 
-1. **HashSet for Search**: Performance vs memory choice
-2. **Case-Insensitive**: Flexibility for real-world cases
-3. **Strict Validation**: Runtime error prevention
-4. **Complete Documentation**: Facilitates maintenance
+1. **Input Validation**: Validates matrix consistency and size limits
+2. **Word Mapping**: Creates case-insensitive mapping for efficient lookup
+3. **Length Optimization**: Only searches for word lengths present in the stream
+4. **Bidirectional Search**: 
+   - Horizontal search: Left to right in each row
+   - Vertical search: Top to bottom in each column
+5. **Result Ranking**: Returns top 10 most frequent words with counts
 
-### Future Improvements
+## Performance Considerations
 
-1. **Parallelization**: For very large matrices
-2. **Caching**: For repeated searches
-3. **Streaming**: For infinite word streams
-4. **Configuration**: Customizable search options
+- **Matrix Size Limit**: Maximum 64x64 characters for optimal performance
+- **Memory Efficient**: Uses dictionaries for word lookups
+- **Optimized Search**: Only checks relevant word lengths
+- **Case-Insensitive**: Single lookup per word regardless of case
 
-## Conclusion
+## Contributing
 
-The implemented solution meets all challenge requirements and demonstrates professional software development skills, including:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- Complex problem analysis
-- Efficient algorithm design
-- Clean and maintainable code
-- Comprehensive testing
-- Professional documentation
-- Performance and scalability considerations 
+---
+
+**Built with using .NET 8.0 and C#** 
