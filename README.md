@@ -1,4 +1,4 @@
-﻿# WordFinder Challenge
+# WordFinder Challenge
 
 ## Problem Description
 
@@ -30,13 +30,7 @@ public class WordFinder
    - Matrix cannot be null or empty
    - All rows must have the same length
    - Maximum matrix size: 64x64
-
-2. **Efficient Algorithm**:
-   - Uses `HashSet` for O(1) lookup
-   - Case-insensitive search
-   - Memory optimization
-
-3. **Complete Search**:
+2. **Complete Search**:
    - Horizontal: left to right
    - Vertical: top to bottom
    - All possible word lengths
@@ -47,26 +41,6 @@ public class WordFinder
    - Unique count per word (no stream duplicates)
 
 ## Performance Analysis
-
-### Time Complexity
-- **Construction**: O(n²) where n is the matrix size
-- **Search**: O(m × n² × k) where:
-  - m = number of words in the stream
-  - n = matrix size
-  - k = average word length
-
-### Implemented Optimizations
-
-1. **HashSet for Lookup**: O(1) instead of O(n) for word search
-2. **Case-Insensitive**: Uses `StringComparer.OrdinalIgnoreCase`
-3. **Memory Efficient**: Reuses data structures
-4. **Early Validation**: Filters edge cases before processing
-
-### Resource Considerations
-
-- **Memory**: Efficient usage with `Dictionary` for counts
-- **CPU**: Optimized algorithm for large matrices
-- **Scalability**: Handles large word streams
 
 ## Usage
 
