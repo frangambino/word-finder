@@ -45,7 +45,7 @@ dotnet build
 dotnet run --project WordFinderProject
 ```
 
-## 📖 Usage
+## Usage
 
 ### Basic Example
 
