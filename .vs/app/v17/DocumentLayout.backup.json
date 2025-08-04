@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\ProyectosNet\\WordFinderProject\\app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{38C5D915-67E9-465E-B0C7-8B4B05BDA509}|WordFinderProject\\WordFinderProject.csproj|c:\\proyectosnet\\wordfinderproject\\app\\wordfinderproject\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{38C5D915-67E9-465E-B0C7-8B4B05BDA509}|WordFinderProject\\WordFinderProject.csproj|solutionrelative:wordfinderproject\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A87665C-ACA4-45C7-9B00-F7B2279C5009}|TestProject\\TestProject.csproj|c:\\proyectosnet\\wordfinderproject\\app\\testproject\\wordfindertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A87665C-ACA4-45C7-9B00-F7B2279C5009}|TestProject\\TestProject.csproj|solutionrelative:testproject\\wordfindertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\ProyectosNet\\WordFinderProject\\app\\WordFinderProject\\README.md",
+              "RelativeDocumentMoniker": "WordFinderProject\\README.md",
+              "ToolTip": "C:\\ProyectosNet\\WordFinderProject\\app\\WordFinderProject\\README.md",
+              "RelativeToolTip": "WordFinderProject\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-04T12:48:29.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "WordFinder.cs",
               "DocumentMoniker": "C:\\ProyectosNet\\WordFinderProject\\app\\WordFinderProject\\WordFinder.cs",
               "RelativeDocumentMoniker": "WordFinderProject\\WordFinder.cs",
@@ -103,20 +120,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "WordFinderTests.cs",
               "DocumentMoniker": "C:\\ProyectosNet\\WordFinderProject\\app\\TestProject\\WordFinderTests.cs",
               "RelativeDocumentMoniker": "TestProject\\WordFinderTests.cs",
               "ToolTip": "C:\\ProyectosNet\\WordFinderProject\\app\\TestProject\\WordFinderTests.cs",
               "RelativeToolTip": "TestProject\\WordFinderTests.cs",
-              "ViewState": "AgIAANoAAABgZmZmZkYxwAMBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T19:12:23.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\ProyectosNet\\WordFinderProject\\app\\WordFinderProject\\Program.cs",
               "RelativeDocumentMoniker": "WordFinderProject\\Program.cs",
