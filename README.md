@@ -82,7 +82,6 @@ The solution includes comprehensive tests covering:
 - ✅ Case-insensitive search
 - ✅ 10 result limit
 - ✅ Challenge example
-- ✅ Performance tests
 - ✅ Parameterized tests with TestCase
 
 ### Test Framework: NUnit
@@ -90,7 +89,6 @@ The solution includes comprehensive tests covering:
 The project uses NUnit for testing, which provides:
 
 - **Fluent Assertions**: `Assert.That(result, Is.EqualTo(expected))`
-- **Test Categories**: `[Category("Performance")]`
 - **Parameterized Tests**: `[TestCase(...)]`
 - **Better Error Messages**: More descriptive failure messages
 - **Test Fixtures**: `[TestFixture]` for class organization
