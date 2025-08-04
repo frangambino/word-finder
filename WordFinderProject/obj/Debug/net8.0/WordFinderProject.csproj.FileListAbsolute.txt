@@ -1,0 +1,14 @@
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\bin\Debug\net8.0\WordFinderProject.exe
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\bin\Debug\net8.0\WordFinderProject.deps.json
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\bin\Debug\net8.0\WordFinderProject.runtimeconfig.json
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\bin\Debug\net8.0\WordFinderProject.dll
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\bin\Debug\net8.0\WordFinderProject.pdb
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.AssemblyInfoInputs.cache
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.AssemblyInfo.cs
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.csproj.CoreCompileInputs.cache
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.dll
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\refint\WordFinderProject.dll
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.pdb
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\WordFinderProject.genruntimeconfig.cache
+C:\ProyectosNet\WordFinderProject\app\WordFinderProject\obj\Debug\net8.0\ref\WordFinderProject.dll
