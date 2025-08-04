@@ -75,14 +75,14 @@ chill
 
 The solution includes comprehensive tests covering:
 
-- ✅ Valid input cases
-- ✅ Error validation
-- ✅ Horizontal and vertical search
-- ✅ Edge cases (empty matrix, empty stream)
-- ✅ Case-insensitive search
-- ✅ 10 result limit
-- ✅ Challenge example
-- ✅ Parameterized tests with TestCase
+- Valid input cases
+- Error validation
+- Horizontal and vertical search
+- Edge cases (empty matrix, empty stream)
+- Case-insensitive search
+- 10 result limit
+- Challenge example
+- Parameterized tests with TestCase
 
 ### Test Framework: NUnit
 
